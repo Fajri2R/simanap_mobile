@@ -1,3 +1,4 @@
 # simanap_mobile
 
-A new Flutter project.
+Aplikasi Mobile SIMANAP
+Menggunakan bahasa pemrograman Dart dan framework Flutter

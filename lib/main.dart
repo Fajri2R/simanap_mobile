@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:simanap_mobile/home_screen.dart';
+import 'package:simanap_mobile/main_screen.dart';
 import 'package:simanap_mobile/splash_screen.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const SplashScreen();
           } else {
-            return const HomeScreen();
+            return const MainScreen();
           }
         },
       ),

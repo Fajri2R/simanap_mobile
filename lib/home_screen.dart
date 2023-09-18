@@ -15,11 +15,11 @@ class _BasicBottomNavBarState extends State<HomeScreen> {
   void initState() {
     super.initState();
     _pages = <Widget>[
-      Icon(
+      const Icon(
         Icons.vaccines,
         size: 150,
       ),
-      Icon(
+      const Icon(
         Icons.business,
         size: 150,
       ),
@@ -31,10 +31,10 @@ class _BasicBottomNavBarState extends State<HomeScreen> {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
-        side: BorderSide(color: Colors.black, width: 1.0),
+        side: const BorderSide(color: Colors.black, width: 1.0),
       ),
-      margin: EdgeInsets.all(10.0),
-      child: Padding(
+      margin: const EdgeInsets.all(10.0),
+      child: const Padding(
         padding: EdgeInsets.all(10.0),
         child: Column(
           children: <Widget>[

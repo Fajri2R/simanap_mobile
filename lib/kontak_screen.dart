@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:get/get.dart';
 
 class KontakScreen extends StatefulWidget {
   const KontakScreen({Key? key}) : super(key: key);
@@ -29,12 +28,12 @@ class _KontakScreenState extends State<KontakScreen> {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
-        side: BorderSide(
-            color: const Color.fromARGB(255, 156, 156, 156), width: 0.5),
+        side: const BorderSide(
+            color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
       ),
-      margin: EdgeInsets.all(10.0),
-      color: Color.fromARGB(255, 223, 130, 10),
-      child: Center(
+      margin: const EdgeInsets.all(10.0),
+      color: const Color.fromARGB(255, 223, 130, 10),
+      child: const Center(
         child: Padding(
           padding: EdgeInsets.all(10.0),
           child: Column(
@@ -59,11 +58,11 @@ class _KontakScreenState extends State<KontakScreen> {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
-        side: BorderSide(
-            color: const Color.fromARGB(255, 156, 156, 156), width: 0.5),
+        side: const BorderSide(
+            color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
       ),
-      margin: EdgeInsets.all(10.0),
-      child: Padding(
+      margin: const EdgeInsets.all(10.0),
+      child: const Padding(
         padding: EdgeInsets.all(10.0),
         child: Column(
           children: <Widget>[
@@ -99,11 +98,11 @@ class _KontakScreenState extends State<KontakScreen> {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
-        side: BorderSide(
-            color: const Color.fromARGB(255, 156, 156, 156), width: 0.5),
+        side: const BorderSide(
+            color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
       ),
-      margin: EdgeInsets.all(10.0),
-      child: Padding(
+      margin: const EdgeInsets.all(10.0),
+      child: const Padding(
         padding: EdgeInsets.all(10.0),
         child: Column(
           children: <Widget>[
@@ -140,11 +139,11 @@ class _KontakScreenState extends State<KontakScreen> {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
-        side: BorderSide(
-            color: const Color.fromARGB(255, 156, 156, 156), width: 0.5),
+        side: const BorderSide(
+            color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
       ),
-      margin: EdgeInsets.all(10.0),
-      child: Padding(
+      margin: const EdgeInsets.all(10.0),
+      child: const Padding(
         padding: EdgeInsets.all(10.0),
         child: Column(
           children: <Widget>[
@@ -180,23 +179,27 @@ class _KontakScreenState extends State<KontakScreen> {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
-        side: BorderSide(
-            color: const Color.fromARGB(255, 156, 156, 156), width: 0.5),
+        side: const BorderSide(
+            color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
       ),
-      margin: EdgeInsets.all(10.0),
+      margin: const EdgeInsets.all(10.0),
       child: Padding(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 InkWell(
-                  onTap: () {
-                    launch(
-                        'https://www.facebook.com/rsudhamkotajambi/'); // Ganti dengan tautan yang diinginkan
+                  onTap: () async {
+                    const urlFB = 'https://www.facebook.com/rsudhamkotajambi';
+                    if (await canLaunchUrl(Uri.parse(urlFB))) {
+                      await launchUrl(Uri.parse(urlFB));
+                    } else {
+                      throw 'Could not launch $urlFB';
+                    }
                   },
-                  child: Column(
+                  child: const Column(
                     children: <Widget>[
                       Icon(Icons.facebook,
                           size: 25.0, // Atur ukuran ikon
@@ -212,25 +215,16 @@ class _KontakScreenState extends State<KontakScreen> {
                     ],
                   ),
                 ),
-                // InkWell(
-                //   onTap: () {
-                //     launch(
-                //         'https://www.youtube.com/channel/UCAPPRspvMZpp9GJHE6cPrFw'); // Ganti dengan tautan yang diinginkan
-                //   },
-                //   child: Column(
-                //     children: <Widget>[
-                //       Icon(Icons.video_collection_rounded,
-                //           size: 25.0, // Atur ukuran ikon
-                //           color: Color.fromARGB(255, 223, 130, 10)),
-                //     ],
-                //   ),
-                // ),
                 InkWell(
-                  onTap: () {
-                    launch(
-                        'https://www.instagram.com/rsudhamkotajambi/'); // Ganti dengan tautan yang diinginkan
+                  onTap: () async {
+                    const urlIG = 'https://www.instagram.com/rsudkotajambi/';
+                    if (await canLaunchUrl(Uri.parse(urlIG))) {
+                      await launchUrl(Uri.parse(urlIG));
+                    } else {
+                      throw 'Could not launch $urlIG';
+                    }
                   },
-                  child: Column(
+                  child: const Column(
                     children: <Widget>[
                       Icon(Icons.photo_camera_outlined,
                           size: 25.0, // Atur ukuran ikon

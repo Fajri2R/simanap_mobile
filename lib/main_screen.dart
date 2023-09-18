@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:simanap_mobile/fasilitas_screen.dart';
+import 'package:simanap_mobile/kontak_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -20,49 +22,11 @@ class _MainScreenState extends State<MainScreen> {
         Icons.vaccines,
         size: 150,
       ),
-      const Icon(
-        Icons.business,
-        size: 150,
-      ),
-      _buildKontakCard(),
+      const FasilitasScreen(),
+      const KontakScreen(),
     ];
 
     _pageController = PageController(initialPage: _selectedIndex);
-  }
-
-  Widget _buildKontakCard() {
-    return SingleChildScrollView(
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
-          side: const BorderSide(color: Colors.black, width: 1.0),
-        ),
-        margin: const EdgeInsets.all(10.0),
-        child: const Padding(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-            children: <Widget>[
-              Text(
-                'Informasi Kontak',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18.0,
-                ),
-              ),
-              SizedBox(height: 10.0),
-              Text(
-                'Nomor Telepon: 123-456-789',
-                style: TextStyle(fontSize: 16.0),
-              ),
-              Text(
-                'Alamat Email: example@email.com',
-                style: TextStyle(fontSize: 16.0),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
   }
 
   void _onItemTapped(int index) {

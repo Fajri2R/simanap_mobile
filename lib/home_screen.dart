@@ -9,25 +9,56 @@ class HomeScreen extends StatefulWidget {
 
 class _BasicBottomNavBarState extends State<HomeScreen> {
   int _selectedIndex = 0;
+  late List<Widget> _pages; // Deklarasikan _pages sebagai late variable
 
-  static const List<Widget> _pages = <Widget>[
-    Icon(
-      Icons.vaccines,
-      size: 150,
-    ),
-    Icon(
-      Icons.business,
-      size: 150,
-    ),
-    Icon(
-      Icons.call,
-      size: 150,
-    ),
-    // Icon(
-    //   Icons.chat,
-    //   size: 150,
-    // ),
-  ];
+  @override
+  void initState() {
+    super.initState();
+    _pages = <Widget>[
+      Icon(
+        Icons.vaccines,
+        size: 150,
+      ),
+      Icon(
+        Icons.business,
+        size: 150,
+      ),
+      _buildKontakCard(), // Memanggil fungsi untuk menampilkan card kontak
+    ];
+  }
+
+  Widget _buildKontakCard() {
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0),
+        side: BorderSide(color: Colors.black, width: 1.0),
+      ),
+      margin: EdgeInsets.all(10.0),
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            Text(
+              'Informasi Kontak',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18.0,
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Text(
+              'Nomor Telepon: 123-456-789',
+              style: TextStyle(fontSize: 16.0),
+            ),
+            Text(
+              'Alamat Email: example@email.com',
+              style: TextStyle(fontSize: 16.0),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
   void _onItemTapped(int index) {
     setState(() {
@@ -58,10 +89,6 @@ class _BasicBottomNavBarState extends State<HomeScreen> {
             icon: Icon(Icons.call),
             label: 'Kontak',
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.chat),
-          //   label: 'Chats',
-          // ),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,

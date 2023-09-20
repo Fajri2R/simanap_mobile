@@ -13,15 +13,34 @@ dependencies:
     sdk: flutter
   flutter_lorem: ^2.0.0
   get: ^4.6.6
+  http: ^1.1.0
   url_launcher: ^6.0.10
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  flutter_launcher_icons: "^0.13.1"
 
 flutter:
   uses-material-design: true
   assets:
     - assets/logo/
     - assets/images/
+    - assets/icon/
+
+#Settings Font
+fonts:
+    - family: Staatliches
+      fonts:
+        - asset: fonts/Staatliches-Regular.ttf
+    - family: Oxygen
+      fonts:
+        - asset: fonts/Oxygen-Regular.ttf
+
+#Settings Icon
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/playstore.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21

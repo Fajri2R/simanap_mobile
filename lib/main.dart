@@ -14,6 +14,10 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: "SIMANAP Mobile",
+      theme: ThemeData(
+        scaffoldBackgroundColor:
+            const Color(0xFF123456), // Ganti warna sesuai keinginan
+      ),
       home: FutureBuilder(
         future: Future.delayed(const Duration(seconds: 5)),
         builder: (context, snapshot) {

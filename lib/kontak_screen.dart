@@ -32,7 +32,7 @@ class _KontakScreenState extends State<KontakScreen> {
             color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
       ),
       margin: const EdgeInsets.all(10.0),
-      color: const Color.fromARGB(255, 223, 130, 10),
+      color: Color.fromARGB(255, 102, 138, 97),
       child: const Center(
         child: Padding(
           padding: EdgeInsets.all(10.0),
@@ -71,13 +71,13 @@ class _KontakScreenState extends State<KontakScreen> {
               children: <Widget>[
                 Icon(Icons.location_on_rounded,
                     size: 25.0, // Atur ukuran ikon
-                    color: Color.fromARGB(255, 223, 130, 10)),
+                    color: Color.fromARGB(255, 102, 138, 97)),
                 SizedBox(width: 8.0), // Jarak antara ikon dan teks
               ],
             ),
             SizedBox(height: 8.0), // J
             Text(
-              'Alamat',
+              'ALAMAT',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20.0,
@@ -111,14 +111,14 @@ class _KontakScreenState extends State<KontakScreen> {
               children: <Widget>[
                 Icon(Icons.email,
                     size: 25.0, // Atur ukuran ikon
-                    color: Color.fromARGB(255, 223, 130, 10)),
+                    color: Color.fromARGB(255, 102, 138, 97)),
                 SizedBox(width: 8.0), // Jarak antara ikon dan teks
               ],
             ),
             SizedBox(
                 height: 8.0), // Jarak antara baris pertama dan teks "Email"
             Text(
-              'Email',
+              'EMAIL',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20.0,
@@ -152,13 +152,13 @@ class _KontakScreenState extends State<KontakScreen> {
               children: <Widget>[
                 Icon(Icons.call_end,
                     size: 25.0, // Atur ukuran ikon
-                    color: Color.fromARGB(255, 223, 130, 10)),
+                    color: Color.fromARGB(255, 102, 138, 97)),
                 SizedBox(width: 8.0), // Jarak antara ikon dan teks
               ],
             ),
             SizedBox(height: 8.0),
             Text(
-              'Telepon',
+              'TELEPON',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20.0,
@@ -203,10 +203,10 @@ class _KontakScreenState extends State<KontakScreen> {
                     children: <Widget>[
                       Icon(Icons.facebook,
                           size: 25.0, // Atur ukuran ikon
-                          color: Color.fromARGB(255, 223, 130, 10)),
+                          color: Color.fromARGB(255, 102, 138, 97)),
                       SizedBox(height: 8.0),
                       Text(
-                        'facebook',
+                        'FACEBOOK',
                         style: TextStyle(
                           fontWeight: FontWeight.normal,
                           fontSize: 12.0,
@@ -228,10 +228,10 @@ class _KontakScreenState extends State<KontakScreen> {
                     children: <Widget>[
                       Icon(Icons.photo_camera_outlined,
                           size: 25.0, // Atur ukuran ikon
-                          color: Color.fromARGB(255, 223, 130, 10)),
+                          color: Color.fromARGB(255, 102, 138, 97)),
                       SizedBox(height: 8.0),
                       Text(
-                        'Instagram',
+                        'INSTAGRAM',
                         style: TextStyle(
                           fontWeight: FontWeight.normal,
                           fontSize: 12.0,

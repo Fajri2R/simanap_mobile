@@ -227,7 +227,8 @@ class _MainScreenState extends State<MainScreen> {
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: const Color(0xFF213B52),
+        backgroundColor: const Color(0xFF213B52),
+        selectedItemColor: Colors.amberAccent,
         unselectedItemColor: Colors.grey,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

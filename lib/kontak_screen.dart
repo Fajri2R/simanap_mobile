@@ -32,7 +32,7 @@ class _KontakScreenState extends State<KontakScreen> {
             color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
       ),
       margin: const EdgeInsets.all(10.0),
-      color: Color.fromARGB(255, 102, 138, 97),
+      color: const Color.fromARGB(255, 102, 138, 97),
       child: const Center(
         child: Padding(
           padding: EdgeInsets.all(10.0),

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:simanap_mobile/fasilitas_screen.dart';
 import 'package:simanap_mobile/kontak_screen.dart';
 
-import 'package:flutter/material.dart';
-
 class _LayananScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -18,7 +16,7 @@ class _LayananScreen extends StatelessWidget {
               side: const BorderSide(
                   color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
             ),
-            color: Color.fromARGB(255, 102, 138, 97),
+            color: const Color.fromARGB(255, 102, 138, 97),
             margin: const EdgeInsets.all(8),
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -30,8 +28,8 @@ class _LayananScreen extends StatelessWidget {
                       'assets/logo/rsud.png',
                       height: 80,
                     ),
-                    SizedBox(height: 8.0), // J
-                    Text(
+                    const SizedBox(height: 8.0), // J
+                    const Text(
                       "SELAMAT DATANG DI APLIKASI SIMANAP MOBILE",
                       style: TextStyle(
                         fontSize: 17.0,
@@ -50,7 +48,7 @@ class _LayananScreen extends StatelessWidget {
         GridView.count(
           shrinkWrap: true, // Tambahkan ini
           physics:
-              NeverScrollableScrollPhysics(), // Tambahkan ini untuk mencegah scroll
+              const NeverScrollableScrollPhysics(), // Tambahkan ini untuk mencegah scroll
           padding: const EdgeInsets.all(5),
           crossAxisCount: 2,
           children: <Widget>[
@@ -60,13 +58,13 @@ class _LayananScreen extends StatelessWidget {
                 side: const BorderSide(
                     color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
               ),
-              color: Color(0xFFA3EB8D),
+              color: const Color(0xFFA3EB8D),
               margin: const EdgeInsets.all(8),
               child: InkWell(
                 onTap: () {},
-                splashColor: Color.fromARGB(255, 255, 255, 255),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                splashColor: const Color.fromARGB(255, 255, 255, 255),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Center(
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
@@ -80,7 +78,7 @@ class _LayananScreen extends StatelessWidget {
                           "KETERSEDIAAN TEMPAT TIDUR",
                           style: TextStyle(
                             fontSize: 15.0,
-                            color: const Color(0xFF123456), // Warna teks putih
+                            color: Color(0xFF123456), // Warna teks putih
                             fontWeight: FontWeight.w800, // Tebal (bold)
                           ),
                           textAlign: TextAlign.center, // Rata tengah),
@@ -97,13 +95,13 @@ class _LayananScreen extends StatelessWidget {
                 side: const BorderSide(
                     color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
               ),
-              color: Color(0xFFA3EB8D),
+              color: const Color(0xFFA3EB8D),
               margin: const EdgeInsets.all(8),
               child: InkWell(
                 onTap: () {},
-                splashColor: Color.fromARGB(255, 255, 255, 255),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                splashColor: const Color.fromARGB(255, 255, 255, 255),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Center(
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
@@ -117,7 +115,7 @@ class _LayananScreen extends StatelessWidget {
                           "JADWAL DOKTER",
                           style: TextStyle(
                             fontSize: 15.0,
-                            color: const Color(0xFF123456), // Warna teks putih
+                            color: Color(0xFF123456), // Warna teks putih
                             fontWeight: FontWeight.bold, // Tebal (bold)
                           ),
                           textAlign: TextAlign.center, // Rata tengah
@@ -138,13 +136,13 @@ class _LayananScreen extends StatelessWidget {
               side: const BorderSide(
                   color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
             ),
-            color: Color(0xFFA3EB8D),
+            color: const Color(0xFFA3EB8D),
             margin: const EdgeInsets.all(8),
             child: InkWell(
               onTap: () {},
-              splashColor: Color.fromARGB(255, 255, 255, 255),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+              splashColor: const Color.fromARGB(255, 255, 255, 255),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Center(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -158,7 +156,7 @@ class _LayananScreen extends StatelessWidget {
                         "INFORMASI",
                         style: TextStyle(
                           fontSize: 15.0,
-                          color: const Color(0xFF123456), // Warna teks putih
+                          color: Color(0xFF123456), // Warna teks putih
                           fontWeight: FontWeight.bold, // Tebal (bold)
                         ),
                         textAlign: TextAlign.center, // Rata tengah)

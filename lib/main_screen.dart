@@ -43,8 +43,23 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SIMANAP'),
-        backgroundColor: const Color(0xFF213B52),
+        title: Text(
+          'S I M A N A P',
+          style: TextStyle(
+            color: const Color(0xFF00A777), // Warna teks hitam
+          ),
+        ),
+        backgroundColor: Colors.white, // Warna latar belakang putih
+        centerTitle: true, // Menyusun judul ke tengah
+        elevation: 0.2, // Menghilangkan shadow di bawah AppBar
+        // Mengatur border bawah
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(4), // Ketebalan border
+          child: Container(
+            color: Color.fromARGB(255, 218, 216, 216), // Warna border
+            height: 0.5, // Ketebalan border
+          ),
+        ),
       ),
       body: PageView(
         controller: _pageController,
@@ -56,9 +71,9 @@ class _MainScreenState extends State<MainScreen> {
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color(0xFF213B52),
-        selectedItemColor: Colors.amberAccent,
-        unselectedItemColor: Colors.grey,
+        backgroundColor: const Color(0xFFFFFFFF),
+        selectedItemColor: const Color(0xFF00A777),
+        unselectedItemColor: Colors.grey[350],
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.vaccines),
@@ -106,7 +121,7 @@ class _LayananScreen extends StatelessWidget {
                         'assets/logo/rsud.png',
                         height: 80,
                       ),
-                     const SizedBox(height: 12.0),
+                      const SizedBox(height: 12.0),
                       const Text(
                         "Selamat Datang Di Aplikasi",
                         style: TextStyle(

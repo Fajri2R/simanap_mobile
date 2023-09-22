@@ -31,4 +31,52 @@ var fasilitasList = [
       'http://simanap.com/simanap/assets/img/fasilitas/MAMOGRAFI.jpg'
     ],
   ),
+  Fasilitas(
+    name: 'CT-SCAN 128 SLICE CARDIO',
+    description: lorem(paragraphs: 2, words: 100),
+    openDays: 'Open Everyday',
+    openTime: '09:00 - 20:00',
+    imageAsset: 'assets/images/ct-scan.jpg',
+    imageUrls: [
+      'http://simanap.com/simanap/assets/img/fasilitas/CT_SCAN.jpg',
+      'http://simanap.com/simanap/assets/img/fasilitas/RONTGEN_D-R_C-R.jpg',
+      'http://simanap.com/simanap/assets/img/fasilitas/MAMOGRAFI.jpg'
+    ],
+  ),
+  Fasilitas(
+    name: 'CT-SCAN 128 SLICE CARDIO',
+    description: lorem(paragraphs: 2, words: 100),
+    openDays: 'Open Everyday',
+    openTime: '09:00 - 20:00',
+    imageAsset: 'assets/images/ct-scan.jpg',
+    imageUrls: [
+      'http://simanap.com/simanap/assets/img/fasilitas/CT_SCAN.jpg',
+      'http://simanap.com/simanap/assets/img/fasilitas/RONTGEN_D-R_C-R.jpg',
+      'http://simanap.com/simanap/assets/img/fasilitas/MAMOGRAFI.jpg'
+    ],
+  ),
+  Fasilitas(
+    name: 'CT-SCAN 128 SLICE CARDIO',
+    description: lorem(paragraphs: 2, words: 100),
+    openDays: 'Open Everyday',
+    openTime: '09:00 - 20:00',
+    imageAsset: 'assets/images/ct-scan.jpg',
+    imageUrls: [
+      'http://simanap.com/simanap/assets/img/fasilitas/CT_SCAN.jpg',
+      'http://simanap.com/simanap/assets/img/fasilitas/RONTGEN_D-R_C-R.jpg',
+      'http://simanap.com/simanap/assets/img/fasilitas/MAMOGRAFI.jpg'
+    ],
+  ),
+  Fasilitas(
+    name: 'CT-SCAN 128 SLICE CARDIO',
+    description: lorem(paragraphs: 2, words: 100),
+    openDays: 'Open Everyday',
+    openTime: '09:00 - 20:00',
+    imageAsset: 'assets/images/ct-scan.jpg',
+    imageUrls: [
+      'http://simanap.com/simanap/assets/img/fasilitas/CT_SCAN.jpg',
+      'http://simanap.com/simanap/assets/img/fasilitas/RONTGEN_D-R_C-R.jpg',
+      'http://simanap.com/simanap/assets/img/fasilitas/MAMOGRAFI.jpg'
+    ],
+  ),
 ];

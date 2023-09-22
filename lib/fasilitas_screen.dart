@@ -22,27 +22,37 @@ class _FasilitasScreenState extends State<FasilitasScreen> {
                 return FasilitasDetail(place: place);
               }));
             },
-            child: Card(
-              child: Column(
-                // Use a Column to stack the image and text vertically
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Image.asset(place.imageAsset),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
+            child: Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),
+                  side: const BorderSide(
+                      color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
+                ),
+                color: const Color.fromARGB(255, 255, 255, 255),
+                margin: const EdgeInsets.fromLTRB(8, 8, 8, 4),
+                child: Padding(
+                  padding: const EdgeInsets.all(6.0),
+                  child: Center(
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        Center(
-                          child: Text(
-                            place.name,
-                            style: const TextStyle(fontSize: 16.0),
+                        Image.asset(place.imageAsset),
+                        const SizedBox(height: 8.0), // J
+                        Text(
+                          place.name,
+                          style: const TextStyle(
+                            fontSize: 17.0,
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            fontWeight: FontWeight.bold,
                           ),
+                          textAlign: TextAlign.center,
                         ),
                       ],
                     ),
-                  )
-                ],
+                  ),
+                ),
               ),
             ),
           );

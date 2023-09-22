@@ -9,25 +9,29 @@ class SplashScreen extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: const Color(0xFF213B52),
+        backgroundColor: const Color(0xFF00A777),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
+              Image.asset(
+                "assets/logo/rsud.png",
                 width: Get.width * 0.5,
                 height: Get.width * 0.5,
-                child: Image.asset("assets/logo/rsud.png"),
               ),
               SizedBox(
-                width: Get.width * 0.6,
-                height: Get.width * 0.6,
-                child: Image.asset("assets/logo/character.png"),
+                  height: 2), // Sesuaikan dengan jarak vertikal yang diinginkan
+              Image.asset(
+                "assets/logo/character.png",
+                width: Get.width * 0.5,
+                height: Get.width * 0.5,
               ),
               SizedBox(
+                  height: 2), // Sesuaikan dengan jarak vertikal yang diinginkan
+              Image.asset(
+                "assets/logo/simanap-text.png",
                 width: 350,
                 height: Get.width * 0.5,
-                child: Image.asset("assets/logo/simanap-text.png"),
               ),
             ],
           ),

@@ -6,160 +6,46 @@ class _LayananScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(children: <Widget>[
-        // Card luar GridView
-        Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5.0),
-              side: const BorderSide(
-                  color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
-            ),
-            color: const Color.fromARGB(255, 102, 138, 97),
-            margin: const EdgeInsets.all(8),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Image.asset(
-                      'assets/logo/rsud.png',
-                      height: 80,
-                    ),
-                    const SizedBox(height: 8.0), // J
-                    const Text(
-                      "SELAMAT DATANG DI APLIKASI SIMANAP MOBILE",
-                      style: TextStyle(
-                        fontSize: 17.0,
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ),
-        // GridView.count
-        GridView.count(
-          shrinkWrap: true, // Tambahkan ini
-          physics:
-              const NeverScrollableScrollPhysics(), // Tambahkan ini untuk mencegah scroll
-          padding: const EdgeInsets.all(5),
-          crossAxisCount: 2,
-          children: <Widget>[
-            Card(
+      child: Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(2.0),
+            child: Card(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
+                borderRadius: BorderRadius.circular(5.0),
                 side: const BorderSide(
-                    color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
+                    color: Color.fromARGB(255, 243, 238, 238), width: 0.1),
               ),
-              color: const Color(0xFFA3EB8D),
+              color: const Color(0xFF00A777),
               margin: const EdgeInsets.all(8),
-              child: InkWell(
-                onTap: () {},
-                splashColor: const Color.fromARGB(255, 255, 255, 255),
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Center(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        Icon(
-                          Icons.bed,
-                          size: 120,
-                          color: Color.fromARGB(255, 255, 255, 255),
-                        ),
-                        Text(
-                          "KETERSEDIAAN TEMPAT TIDUR",
-                          style: TextStyle(
-                            fontSize: 15.0,
-                            color: Color(0xFF123456), // Warna teks putih
-                            fontWeight: FontWeight.w800, // Tebal (bold)
-                          ),
-                          textAlign: TextAlign.center, // Rata tengah),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-                side: const BorderSide(
-                    color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
-              ),
-              color: const Color(0xFFA3EB8D),
-              margin: const EdgeInsets.all(8),
-              child: InkWell(
-                onTap: () {},
-                splashColor: const Color.fromARGB(255, 255, 255, 255),
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Center(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        Icon(
-                          Icons.watch_later,
-                          size: 120,
-                          color: Color.fromARGB(255, 255, 255, 255),
-                        ),
-                        Text(
-                          "JADWAL DOKTER",
-                          style: TextStyle(
-                            fontSize: 15.0,
-                            color: Color(0xFF123456), // Warna teks putih
-                            fontWeight: FontWeight.bold, // Tebal (bold)
-                          ),
-                          textAlign: TextAlign.center, // Rata tengah
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-        Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15.0),
-              side: const BorderSide(
-                  color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
-            ),
-            color: const Color(0xFFA3EB8D),
-            margin: const EdgeInsets.all(8),
-            child: InkWell(
-              onTap: () {},
-              splashColor: const Color.fromARGB(255, 255, 255, 255),
-              child: const Padding(
-                padding: EdgeInsets.all(8.0),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
                 child: Center(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      Icon(
-                        Icons.info,
-                        size: 120,
-                        color: Color.fromARGB(255, 255, 255, 255),
+                      Image.asset(
+                        'assets/logo/rsud.png',
+                        height: 80,
                       ),
-                      Text(
-                        "INFORMASI",
+                      const SizedBox(height: 12.0),
+                      const Text(
+                        "Selamat Datang Di Aplikasi",
                         style: TextStyle(
-                          fontSize: 15.0,
-                          color: Color(0xFF123456), // Warna teks putih
-                          fontWeight: FontWeight.bold, // Tebal (bold)
+                          fontSize: 17.0,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.w400,
                         ),
-                        textAlign: TextAlign.center, // Rata tengah)
+                        textAlign: TextAlign.center,
+                      ),
+                      const Text(
+                        "SIMANAP Mobile",
+                        style: TextStyle(
+                          fontSize: 17.0,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.w400,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
                     ],
                   ),
@@ -167,8 +53,116 @@ class _LayananScreen extends StatelessWidget {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5.0),
+                side: const BorderSide(
+                    color: Color.fromARGB(255, 228, 223, 223), width: 0.1),
+              ),
+              color: const Color(0xFFECF7F1),
+              margin: const EdgeInsets.all(2),
+              child: InkWell(
+                onTap: () {},
+                splashColor: const Color.fromARGB(255, 255, 255, 255),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    const Padding(
+                      padding: EdgeInsets.all(15.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Text(
+                            "Layanan dan Informasi",
+                            style: TextStyle(
+                              fontSize: 17.0,
+                              color: Color(0xFF000000),
+                              fontWeight: FontWeight.w600,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                          SizedBox(height: 8.0),
+                          Text(
+                            "Silahkan Pilih Menu Dibawah Untuk Mengakses Layanan",
+                            style: TextStyle(
+                              fontSize: 12.0,
+                              color: Color(0xFF000000),
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          GridView.count(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            padding: const EdgeInsets.all(7),
+            crossAxisCount: 2,
+            children: <Widget>[
+              buildGridItem(
+                  'assets/logo/tidur2.png', "Ketersediaan Tempat Tidur"),
+              buildGridItem('assets/logo/jadwal2.png', "Jadwal Dokter"),
+              buildGridItem('assets/logo/informasi2.png', "Informasi"),
+              // Add more items here as needed
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildGridItem(String imagePath, String text) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30.0),
+            side: const BorderSide(
+              color: Color.fromARGB(255, 231, 225, 225),
+              width: 0.1,
+            ),
+          ),
+          color: const Color(0xFFF0F7FF),
+          margin: const EdgeInsets.all(8),
+          child: InkWell(
+            onTap: () {},
+            splashColor: const Color.fromARGB(255, 255, 255, 255),
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Center(
+                child: Image.asset(
+                  imagePath,
+                  height: 120,
+                  width: 120,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+          ),
         ),
-      ]),
+        Text(
+          text,
+          style: TextStyle(
+            fontSize: 13.0,
+            color: Color.fromARGB(255, 0, 0, 0),
+            fontWeight: FontWeight.w300,
+          ),
+          textAlign: TextAlign.center,
+        ),
+      ],
     );
   }
 }
@@ -214,8 +208,23 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SIMANAP'),
-        backgroundColor: const Color(0xFF213B52),
+        title: Text(
+          'S I M A N A P',
+          style: TextStyle(
+            color: const Color(0xFF00A777), // Warna teks hitam
+          ),
+        ),
+        backgroundColor: Colors.white, // Warna latar belakang putih
+        centerTitle: true, // Menyusun judul ke tengah
+        elevation: 0.2, // Menghilangkan shadow di bawah AppBar
+        // Mengatur border bawah
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(4), // Ketebalan border
+          child: Container(
+            color: Color.fromARGB(255, 218, 216, 216), // Warna border
+            height: 0.5, // Ketebalan border
+          ),
+        ),
       ),
       body: PageView(
         controller: _pageController,
@@ -227,9 +236,9 @@ class _MainScreenState extends State<MainScreen> {
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color(0xFF213B52),
-        selectedItemColor: Colors.amberAccent,
-        unselectedItemColor: Colors.grey,
+        backgroundColor: const Color(0xFFFFFFFF),
+        selectedItemColor: const Color(0xFF00A777),
+        unselectedItemColor: Colors.grey[350],
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.vaccines),

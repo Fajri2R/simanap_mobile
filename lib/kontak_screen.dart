@@ -25,27 +25,54 @@ class _KontakScreenState extends State<KontakScreen> {
   }
 
   Widget _buildKontakCard() {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
-        side: const BorderSide(
-            color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
-      ),
-      margin: const EdgeInsets.all(10.0),
-      color: const Color.fromARGB(255, 102, 138, 97),
-      child: const Center(
-        child: Padding(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(5.0),
+          side: const BorderSide(
+            color: Color.fromARGB(255, 228, 223, 223),
+            width: 0.1,
+          ),
+        ),
+        color: const Color(0xFFECF7F1),
+        margin: const EdgeInsets.all(5),
+        child: InkWell(
+          onTap: () {},
+          splashColor: const Color.fromARGB(255, 255, 255, 255),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(
-                'KONTAK',
-                style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  fontSize: 20.0,
-                  color: Colors.white,
+              const Padding(
+                padding: EdgeInsets.all(13.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Text(
+                      "Kontak",
+                      style: TextStyle(
+                        fontSize: 17.0,
+                        color: Color(0xFF000000),
+                        fontWeight: FontWeight.w600,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                    SizedBox(height: 8.0),
+                    Text(
+                      "Hubungi Kontak Dibawah Untuk Informasi Lebih Lanjut",
+                      style: TextStyle(
+                        fontSize: 13.0,
+                        color: Color(0xFF000000),
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ],
                 ),
+              ),
+              Expanded(
+                child: Container(),
               ),
             ],
           ),
@@ -57,9 +84,9 @@ class _KontakScreenState extends State<KontakScreen> {
   Widget _buildAlamatCard() {
     return Card(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
+        borderRadius: BorderRadius.circular(5.0),
         side: const BorderSide(
-            color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
+            color: Color.fromARGB(255, 228, 223, 223), width: 0.5),
       ),
       margin: const EdgeInsets.all(10.0),
       child: const Padding(
@@ -71,22 +98,22 @@ class _KontakScreenState extends State<KontakScreen> {
               children: <Widget>[
                 Icon(Icons.location_on_rounded,
                     size: 25.0, // Atur ukuran ikon
-                    color: Color.fromARGB(255, 102, 138, 97)),
+                    color: Color.fromARGB(255, 0, 0, 0)),
                 SizedBox(width: 8.0), // Jarak antara ikon dan teks
               ],
             ),
             SizedBox(height: 8.0), // J
             Text(
-              'ALAMAT',
+              'Alamat',
               style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20.0,
+                fontWeight: FontWeight.w400,
+                fontSize: 15.0,
               ),
             ),
             SizedBox(height: 8.0), // J
             Text(
               'Jl. Sk. Rd. Syahbuddin - Mayang Jambi City 36361L',
-              style: TextStyle(fontSize: 16.0),
+              style: TextStyle(fontWeight: FontWeight.w400, fontSize: 13.0),
             ),
           ],
         ),
@@ -97,7 +124,7 @@ class _KontakScreenState extends State<KontakScreen> {
   Widget _buildEmailCard() {
     return Card(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
+        borderRadius: BorderRadius.circular(5.0),
         side: const BorderSide(
             color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
       ),
@@ -111,23 +138,23 @@ class _KontakScreenState extends State<KontakScreen> {
               children: <Widget>[
                 Icon(Icons.email,
                     size: 25.0, // Atur ukuran ikon
-                    color: Color.fromARGB(255, 102, 138, 97)),
+                    color: Color.fromARGB(255, 0, 0, 0)),
                 SizedBox(width: 8.0), // Jarak antara ikon dan teks
               ],
             ),
             SizedBox(
                 height: 8.0), // Jarak antara baris pertama dan teks "Email"
             Text(
-              'EMAIL',
+              'Email',
               style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20.0,
+                fontWeight: FontWeight.w600,
+                fontSize: 15.0,
               ),
             ),
             SizedBox(height: 8.0), // Jarak antara teks "Email" dan alamat email
             Text(
               'rsudjambikota@gmail.com',
-              style: TextStyle(fontSize: 16.0),
+              style: TextStyle(fontWeight: FontWeight.w400, fontSize: 13.0),
             ),
           ],
         ),
@@ -138,9 +165,9 @@ class _KontakScreenState extends State<KontakScreen> {
   Widget _buildTeleponCard() {
     return Card(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
+        borderRadius: BorderRadius.circular(5.0),
         side: const BorderSide(
-            color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
+            color: Color.fromARGB(255, 228, 223, 223), width: 0.5),
       ),
       margin: const EdgeInsets.all(10.0),
       child: const Padding(
@@ -152,22 +179,22 @@ class _KontakScreenState extends State<KontakScreen> {
               children: <Widget>[
                 Icon(Icons.call_end,
                     size: 25.0, // Atur ukuran ikon
-                    color: Color.fromARGB(255, 102, 138, 97)),
+                    color: Color.fromARGB(255, 0, 0, 0)),
                 SizedBox(width: 8.0), // Jarak antara ikon dan teks
               ],
             ),
             SizedBox(height: 8.0),
             Text(
-              'TELEPON',
+              'Telepon',
               style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20.0,
+                fontWeight: FontWeight.w400,
+                fontSize: 15.0,
               ),
             ),
             SizedBox(height: 8.0),
             Text(
               '(0741) 5910190',
-              style: TextStyle(fontSize: 16.0),
+              style: TextStyle(fontWeight: FontWeight.w400, fontSize: 13.0),
             ),
           ],
         ),
@@ -178,9 +205,9 @@ class _KontakScreenState extends State<KontakScreen> {
   Widget _buildSosmedCard() {
     return Card(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
+        borderRadius: BorderRadius.circular(5.0),
         side: const BorderSide(
-            color: Color.fromARGB(255, 156, 156, 156), width: 0.5),
+            color: Color.fromARGB(255, 228, 223, 223), width: 0.5),
       ),
       margin: const EdgeInsets.all(10.0),
       child: Padding(
@@ -203,10 +230,10 @@ class _KontakScreenState extends State<KontakScreen> {
                     children: <Widget>[
                       Icon(Icons.facebook,
                           size: 25.0, // Atur ukuran ikon
-                          color: Color.fromARGB(255, 102, 138, 97)),
+                          color: Color.fromARGB(255, 0, 0, 0)),
                       SizedBox(height: 8.0),
                       Text(
-                        'FACEBOOK',
+                        'Facebook',
                         style: TextStyle(
                           fontWeight: FontWeight.normal,
                           fontSize: 12.0,
@@ -228,10 +255,10 @@ class _KontakScreenState extends State<KontakScreen> {
                     children: <Widget>[
                       Icon(Icons.photo_camera_outlined,
                           size: 25.0, // Atur ukuran ikon
-                          color: Color.fromARGB(255, 102, 138, 97)),
+                          color: Color.fromARGB(255, 0, 0, 0)),
                       SizedBox(height: 8.0),
                       Text(
-                        'INSTAGRAM',
+                        'Instagram',
                         style: TextStyle(
                           fontWeight: FontWeight.normal,
                           fontSize: 12.0,

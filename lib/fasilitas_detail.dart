@@ -15,19 +15,25 @@ class FasilitasDetail extends StatelessWidget {
         backgroundColor: const Color(0xFF213B52),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Stack(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Card(
+            elevation: 4.0, // Add elevation for a shadow effect
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Image.asset(place.imageAsset),
+                Stack(
+                  children: <Widget>[
+                    Image.asset(place.imageAsset),
+                  ],
+                ),
+                _buildTitle(place.name),
+                _buildOpenInformation(place.openDays, place.openTime),
+                _buildDescription(place.description),
+                _buildImageGallery(place.imageUrls),
               ],
             ),
-            _buildTitle(place.name),
-            _buildOpenInformation(place.openDays, place.openTime),
-            _buildDescription(place.description),
-            _buildImageGallery(place.imageUrls),
-          ],
+          ),
         ),
       ),
     );

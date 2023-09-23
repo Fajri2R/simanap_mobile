@@ -221,7 +221,7 @@ class _LayananScreen extends StatelessWidget {
               buildGridItem(
                   'assets/logo/tidur2.png', "Ketersediaan Tempat Tidur"),
               buildGridItem('assets/logo/jadwal2.png', "Jadwal Dokter"),
-              buildGridItem('assets/logo/informasi2.png', "Informasi"),
+              buildGridItem('assets/logo/info.png', "Informasi"),
               // Add more items here as needed
             ],
           ),

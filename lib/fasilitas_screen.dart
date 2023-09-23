@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:simanap_mobile/fasilitas_detail.dart';
 import 'package:simanap_mobile/model/fasilitas.dart';
 
-class FasilitasScreen extends StatefulWidget {
+class FasilitasScreen extends StatelessWidget {
   const FasilitasScreen({Key? key}) : super(key: key);
 
-  @override
-  State<FasilitasScreen> createState() => _FasilitasScreenState();
-}
-
-class _FasilitasScreenState extends State<FasilitasScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

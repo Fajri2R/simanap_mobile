@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -10,31 +9,43 @@ class SplashScreen extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: const Color(0xFF00A777),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                "assets/logo/rsud.png",
-                width: Get.width * 0.5,
-                height: Get.width * 0.5,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Flexible(
+              flex: 2,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(
+                    16, 70, 16, 16), // Add your desired padding here
+                child: Image.asset(
+                  "assets/logo/rsud.png",
+                  fit: BoxFit.cover,
+                ),
               ),
-              SizedBox(
-                  height: 2), // Sesuaikan dengan jarak vertikal yang diinginkan
-              Image.asset(
-                "assets/logo/character.png",
-                width: Get.width * 0.5,
-                height: Get.width * 0.5,
+            ),
+            Flexible(
+              flex: 3,
+              child: Padding(
+                padding:
+                    const EdgeInsets.all(16.0), // Add your desired padding here
+                child: Image.asset(
+                  "assets/logo/character.png",
+                  fit: BoxFit.cover,
+                ),
               ),
-              SizedBox(
-                  height: 2), // Sesuaikan dengan jarak vertikal yang diinginkan
-              Image.asset(
-                "assets/logo/simanap-text.png",
-                width: 350,
-                height: Get.width * 0.5,
+            ),
+            Flexible(
+              flex: 2,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(
+                    16, 16, 16, 70), // Add your desired padding here
+                child: Image.asset(
+                  "assets/logo/simanap-text.png",
+                  fit: BoxFit.cover,
+                ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

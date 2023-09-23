@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class KontakScreen extends StatefulWidget {
+class KontakScreen extends StatelessWidget {
   const KontakScreen({Key? key}) : super(key: key);
 
-  @override
-  State<KontakScreen> createState() => _KontakScreenState();
-}
-
-class _KontakScreenState extends State<KontakScreen> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

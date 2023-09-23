@@ -43,10 +43,10 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'S I M A N A P',
           style: TextStyle(
-            color: const Color(0xFF00A777), // Warna teks hitam
+            color: Color(0xFF00A777), // Warna teks hitam
           ),
         ),
         backgroundColor: Colors.white, // Warna latar belakang putih
@@ -54,9 +54,9 @@ class _MainScreenState extends State<MainScreen> {
         elevation: 0.2, // Menghilangkan shadow di bawah AppBar
         // Mengatur border bawah
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(4), // Ketebalan border
+          preferredSize: const Size.fromHeight(4), // Ketebalan border
           child: Container(
-            color: Color.fromARGB(255, 218, 216, 216), // Warna border
+            color: const Color.fromARGB(255, 218, 216, 216), // Warna border
             height: 0.5, // Ketebalan border
           ),
         ),
@@ -248,10 +248,10 @@ class _LayananScreen extends StatelessWidget {
         ),
         Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 13.0,
             color: Color.fromARGB(255, 0, 0, 0),
-            fontWeight: FontWeight.w300,
+            fontWeight: FontWeight.w400,
           ),
           textAlign: TextAlign.center,
         ),

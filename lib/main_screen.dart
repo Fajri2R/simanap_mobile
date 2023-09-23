@@ -70,26 +70,40 @@ class _MainScreenState extends State<MainScreen> {
           });
         },
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color(0xFFFFFFFF),
-        selectedItemColor: const Color(0xFF00A777),
-        unselectedItemColor: Colors.grey[350],
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.vaccines),
-            label: 'Pelayanan',
+      bottomNavigationBar: Container(
+        decoration: const BoxDecoration(
+          // borderRadius: BorderRadius.only(
+          //     topRight: Radius.circular(30), topLeft: Radius.circular(30)),
+          boxShadow: [
+            BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 1),
+          ],
+        ),
+        child: ClipRRect(
+          // borderRadius: const BorderRadius.only(
+          //   topLeft: Radius.circular(30.0),
+          //   topRight: Radius.circular(30.0),
+          // ),
+          child: BottomNavigationBar(
+            selectedItemColor: const Color(0xFF00A777),
+            unselectedItemColor: Colors.grey[350],
+            items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: Icon(Icons.vaccines),
+                label: 'Pelayanan',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.business),
+                label: 'Fasilitas',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.call),
+                label: 'Kontak',
+              ),
+            ],
+            currentIndex: _selectedIndex,
+            onTap: _onItemTapped,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Fasilitas',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.call),
-            label: 'Kontak',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+        ),
       ),
     );
   }

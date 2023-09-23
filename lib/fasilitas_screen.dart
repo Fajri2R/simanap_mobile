@@ -28,7 +28,7 @@ class FasilitasScreen extends StatelessWidget {
                 color: const Color.fromARGB(255, 255, 255, 255),
                 margin: const EdgeInsets.fromLTRB(8, 8, 8, 4),
                 child: Padding(
-                  padding: const EdgeInsets.all(6.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Center(
                     child: Column(
                       mainAxisSize: MainAxisSize.min,

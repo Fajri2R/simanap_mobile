@@ -1,6 +1,6 @@
 name: simanap_mobile
 description: Sebuah project membuat web SIMANAP menjadi Mobile.
-publish_to: 'none'
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
@@ -15,6 +15,7 @@ dependencies:
   get: ^4.6.6
   http: ^1.1.0
   url_launcher: ^6.0.10
+  webview_flutter: ^3.0.4
 
 dev_dependencies:
   flutter_test:
@@ -31,12 +32,12 @@ flutter:
 
 #Settings Font
 fonts:
-    - family: Staatliches
-      fonts:
-        - asset: fonts/Staatliches-Regular.ttf
-    - family: Oxygen
-      fonts:
-        - asset: fonts/Oxygen-Regular.ttf
+  - family: Staatliches
+    fonts:
+      - asset: fonts/Staatliches-Regular.ttf
+  - family: Oxygen
+    fonts:
+      - asset: fonts/Oxygen-Regular.ttf
 
 #Settings Icon
 #flutter pub get

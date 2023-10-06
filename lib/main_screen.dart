@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:simanap_mobile/fasilitas_screen.dart';
 import 'package:simanap_mobile/kontak_screen.dart';
+import 'package:simanap_mobile/bed_screen.dart';
+import 'package:simanap_mobile/Schedule_screen.dart';
+import 'package:simanap_mobile/Information_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -218,10 +221,11 @@ class _LayananScreen extends StatelessWidget {
             padding: const EdgeInsets.all(7),
             crossAxisCount: 2,
             children: <Widget>[
+              buildGridItem('assets/logo/tidur2.png',
+                  "Ketersediaan Tempat Tidur", context),
               buildGridItem(
-                  'assets/logo/tidur2.png', "Ketersediaan Tempat Tidur"),
-              buildGridItem('assets/logo/jadwal2.png', "Jadwal Dokter"),
-              buildGridItem('assets/logo/info.png', "Informasi"),
+                  'assets/logo/jadwal2.png', "Jadwal Dokter", context),
+              buildGridItem('assets/logo/info.png', "Informasi", context),
               // Add more items here as needed
             ],
           ),
@@ -230,7 +234,23 @@ class _LayananScreen extends StatelessWidget {
     );
   }
 
-  Widget buildGridItem(String imagePath, String text) {
+  Widget buildGridItem(String imagePath, String text, BuildContext context) {
+    Widget destinationScreen;
+
+    switch (text) {
+      case "Ketersediaan Tempat Tidur":
+        destinationScreen = const BedScreen();
+        break;
+      case "Jadwal Dokter":
+        destinationScreen = const ScheduleScreen();
+        break;
+      case "Informasi":
+        destinationScreen = const InformationScreen();
+        break;
+      default:
+        destinationScreen = const MainScreen();
+    }
+
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
@@ -245,7 +265,14 @@ class _LayananScreen extends StatelessWidget {
           color: const Color(0xFFF0F7FF),
           margin: const EdgeInsets.all(8),
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => destinationScreen,
+                ),
+              );
+            },
             splashColor: const Color.fromARGB(255, 255, 255, 255),
             child: Padding(
               padding: const EdgeInsets.all(15.0),

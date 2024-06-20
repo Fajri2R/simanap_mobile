@@ -1,6 +1,6 @@
 # SIMANAP Mobile
 
-Aplikasi yang bertujuan untuk membuat versi Mobile dari web http://simanap.com/simanap/<br>
+Aplikasi yang bertujuan untuk membuat versi Mobile dari web https://simanap.rsudkotajambi.id/simanap/<br>
 
 ## Tools yang digunakan
 
